@@ -11,4 +11,8 @@ puts "----------"
 
 # Your code goes here ...
 @user = gets.chomp 
-Store.create(name: @user)
+new_store = Store.create(name: @user)
+puts new_store.errors.messages
+#TEST 
+#D, [2021-03-29T21:33:36.638481 #15706] DEBUG -- :    (0.4ms)  BEGIN
+#D, [2021-03-29T21:33:36.658498 #15706] DEBUG -- :    (0.4ms)  ROLLBACK
